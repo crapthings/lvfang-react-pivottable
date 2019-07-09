@@ -4,7 +4,7 @@ module.exports = {
   entry: [
     'babel-polyfill',
     'react-hot-loader/patch',
-    './examples/index.jsx'
+    './example/index.jsx'
   ],
   output: {
     filename: 'bundle.js'
@@ -33,7 +33,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin()
   ],
   devServer: {
-      contentBase: './examples',
+      contentBase: './example',
       hot: true
     },
   resolve: {

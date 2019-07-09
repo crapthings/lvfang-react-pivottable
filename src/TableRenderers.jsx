@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {PivotData} from './Utilities';
-import Locales from './locales'
+import Locales from './Locales'
 // helper function for setting row/col-span in pivotTableRenderer
 const spanSize = function(arr, i, j) {
   let x;
@@ -188,7 +188,7 @@ function makeRenderer(opts = {}) {
                   );
                 })}
                 <th className="pvtTotalLabel">
-                  {colAttrs.length === 0 ? 'Totals' : null}
+                  {colAttrs.length === 0 ? (Locales['zh_CN']['Totals'] || 'Totals') : null}
                 </th>
               </tr>
             )}
@@ -258,7 +258,7 @@ function makeRenderer(opts = {}) {
                 className="pvtTotalLabel"
                 colSpan={rowAttrs.length + (colAttrs.length === 0 ? 0 : 1)}
               >
-                Totals
+                {Locales['zh_CN']['Totals'] || 'Totals'}
               </th>
 
               {colKeys.map(function(colKey, i) {

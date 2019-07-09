@@ -5,7 +5,7 @@ import {PivotData, sortAs, getSort} from './Utilities';
 import PivotTable from './PivotTable';
 import Sortable from 'react-sortablejs';
 import Draggable from 'react-draggable';
-import Locales from './locales'
+import Locales from './Locales';
 /* eslint-disable react/prop-types */
 // eslint can't see inherited propTypes!
 
